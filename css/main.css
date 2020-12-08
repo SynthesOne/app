@@ -1,9 +1,14 @@
-.header {
-    padding-top: 78px;
-    padding-bottom: 96px;
+body {
+    margin: 0;
+    box-sizing: border-box;
 }
 
 h1, h2, p {margin: 0;}
+
+#header {
+    padding-top: 78px;
+    padding-bottom: 96px;
+}
 
 /* Начинается блок с картинкой и текстом */
 
@@ -58,13 +63,41 @@ h1, h2, p {margin: 0;}
     background-image: linear-gradient(45deg, #f05a22 50%, transparent 50%);
 }
 
-/*Начинаются эффекты для кнопок*/
+/* Начинаются эффекты для кнопок */
 
 .btn:hover {color: #f05a22;}
 
 .btn:hover {background-position: 0;}
 
-.btn-o:hover {color: white;}
+.btn-o:hover {color: white;} 
+
+/* Начинается блок с особенностями */
+
+#features {
+    padding-top: 88px;   
+    padding-bottom: 100px; 
+    background-color: #f2f2f2;;
+}
+
+.features-title, .footer-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.features-img {
+    margin: 0;
+    text-align: center;
+}
+
+.fix-img {min-height: 74px;}
+
+.features-about {
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align: baseline;
+}
 
 /* Адаптив хедера для маленьких экранов */
 
@@ -72,6 +105,10 @@ h1, h2, p {margin: 0;}
     .header-book {width: 360px;}
     .btn {font-size: 20px;}
     .header-descriprion {margin-top: 20px;}
+}
+
+@media (min-width: 320px) {
+    .features-img {margin-bottom: 24px;}
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -86,3 +123,4 @@ h1, h2, p {margin: 0;}
         margin-right: 10px;
     }
 }
+
