@@ -1,6 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
 }
 
 h1, h2, p {margin: 0;}
@@ -97,6 +98,21 @@ h1, h2, p {margin: 0;}
     font-size: 18px;
     font-weight: 400;
     vertical-align: baseline;
+}
+
+/* Начинается блок с фото покупателей */
+
+#footer {
+    padding-top: 88px;
+    padding-bottom: 72px;
+}
+
+.footer-title {
+    margin-bottom: 68px;
+}
+.footer-buyers {
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Адаптив хедера для маленьких экранов */
