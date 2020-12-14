@@ -34,19 +34,15 @@ h1, p {
 }
 
 .card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 23%;
     text-align: center;
 }
 
 .card-img, .card-text, .card-preice {
     margin-bottom: 24px;
-}
-
-.card-description {
-    width: 263px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
 }
 
 .card-text {
