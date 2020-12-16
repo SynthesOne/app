@@ -1,3 +1,176 @@
 body {
+    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.features {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* Начинается первая часть блока особенностей */
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.numbers-block {
+    width: 280px;
+}
+
+.numbers-block__title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #f39003;
+    margin-bottom: 12px;
+}
+
+.numbers-block__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #373737;
+}
+
+/* Начинается вторая часть блока особенностей */
+
+.features-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features-block {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    background-color: #ffffff;
+    padding: 28px 20px 28px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.features-block__img {
+    width: 80%;
+    height: 51px;
+    align-self: center;
+}
+
+.features-block .icon-1 {
+    background: url("../Img/Production.png") center no-repeat;
+}
+
+.features-block .icon-2 {
+    background: url("../Img/Free_sample.png") center no-repeat;
+}
+
+.features-block .icon-3 {
+    background: url("../Img/Stability.png") center no-repeat;
+}
+
+.features-block .icon-4 {
+    background: url("../Img/Stock.png") center no-repeat;
+}
+
+.features-block .icon-5 {
+    background: url("../Img/Flexo.png") center no-repeat;
+}
+
+.features-block .icon-6 {
+    background: url("../Img/Additives.png") center no-repeat;
+}
+
+.features-block__title {
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #373737;
+}
+.features-block__descr {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Эффекты для карточек особенностей */
+
+.features-block:hover {
+    background-color: black;
+}
+
+.features-block:hover .features-block__title {
+    color: white;
+}
+
+.features-block:hover .features-block__descr {
+    color: white;
+}
+
+.features-block:hover .features-block__img {
+    filter: invert(100%);
+}
+
+/* Адаптив */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {max-width: 1024px;}
+    .numbers-block {max-width: 260px;}
+    .features-block {max-width: 300px;}
+    .numbers-block__title {font-size: 34px;}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {max-width: 768px;}
+    .numbers-block__title {font-size: 32px;}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {max-width: 576px;}
+    .numbers-block {max-width: 240px;}
+    .features-block {max-width: 260px;}
+    .numbers-block__title {font-size: 24px;}
+    .numbers-block__text {font-size: 14px;}
+}
+
+@media (min-width: 321px) and (max-width: 575px) {
+    .container {width: 100%;}
+    .numbers {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: unset;
+    }
+    .features-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .numbers-block {margin-bottom: 20px;}
+    .features-block {width: 88%;}
+    .features-block__img {width: 45%;}
+    .features-block__text {width: 130%;}
+}
+
+@media (max-width: 320px) {
+    .container {width: 100%;}
+    .numbers {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: unset;
+    }
+    .numbers-block {margin-bottom: 24px;}
+    .features-block {width: 84%;}
+    .numbers-block__title {font-size: 30px;}
+    .numbers-block__text {font-size: 14px;}
 }
