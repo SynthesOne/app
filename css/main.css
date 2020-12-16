@@ -152,10 +152,6 @@ p {
         align-items: center;
         margin-bottom: unset;
     }
-    .features-blocks {
-        flex-direction: column;
-        align-items: center;
-    }
     .numbers-block {margin-bottom: 20px;}
     .features-block {width: 88%;}
     .features-block__img {width: 45%;}
