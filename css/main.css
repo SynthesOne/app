@@ -1,0 +1,205 @@
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body.firefox a {
+  font-weight: normal;
+}
+
+#main {
+  color: black;
+}
+
+#main a {
+  font-weight: bold;
+}
+
+#main a:hover {
+  color: red;
+}
+
+#features {
+  padding-top: 70px;
+  padding-bottom: 89px;
+}
+
+#features-title {
+  background-color: red;
+  color: #313131;
+}
+
+#features-title__button {
+  padding: 12px 24px;
+  background-color: azure;
+}
+
+#features-subtitle {
+  font-size: 14px;
+  color: green;
+}
+
+.selector {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+  padding-left: 5px;
+}
+
+.button-1, .button-2 {
+  padding: 15px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.button-1 {
+  color: #373737;
+  background-color: transparent;
+}
+
+.button-2 {
+  background-color: orange;
+  color: #ffffff;
+}
+
+.selector {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  content: "content";
+}
+
+button {
+  background-color: #ff9d00;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #b36e00;
+}
+
+button:focus {
+  background-color: #663f00;
+}
+
+body {
+  background-color: #990709;
+  color: #020406;
+  border-color: rgba(200, 255, 0, 0.75);
+}
+
+p {
+  color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.selector {
+  background-color: rgba(51, 51, 51, 0.75);
+}
+
+.selector {
+  margin-top: 10px;
+}
+
+.item-1 {
+  background-color: #fff;
+}
+
+.selector .item-2 {
+  background-color: #000;
+}
+
+.selector {
+  content: '<= 5';
+}
+
+.item-1 {
+  background-image: url(img/1.jpg);
+}
+
+.item-2 {
+  background-image: url(img/2.jpg);
+}
+
+.item-3 {
+  background-image: url(img/3.jpg);
+}
+
+.item-4 {
+  background-image: url(img/4.jpg);
+}
+
+.item-5 {
+  background-image: url(img/5.jpg);
+}
+
+.item-6 {
+  background-image: url(img/6.jpg);
+}
+
+.item-7 {
+  background-image: url(img/7.jpg);
+}
+
+.item-8 {
+  background-image: url(img/8.jpg);
+}
+
+.item-9 {
+  background-image: url(img/9.jpg);
+}
+
+.item-10 {
+  background-image: url(img/10.jpg);
+}
+
+.sction-carousel {
+  background-image: url(img/carousel.jpg);
+}
+
+.sction-block {
+  background-image: url(img/block.jpg);
+}
+
+.sction-vertical {
+  background-image: url(img/vertical.jpg);
+}
+
+.sction-reviews {
+  background-image: url(img/reviews.jpg);
+}
+
+.sction-footer {
+  background-image: url(img/footer.jpg);
+}
+
+.item-7 {
+  width: 7em;
+}
+
+.item-4 {
+  width: 4em;
+}
+
+.item-1 {
+  width: 1em;
+}
+
+h1 {
+  border: 1px solid #333;
+}
+
+button {
+  transition: top 0.5s ease-out;
+}

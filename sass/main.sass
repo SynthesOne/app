@@ -1,0 +1,183 @@
+// привязка к родительскому элементу
+a
+    font-weight: bold
+    text-decoration: none
+    &:hover  // & привязка к какому-либо тегу/селектору
+        text-decoration: underline 
+
+    body.firefox & 
+        font-weight: normal
+#main
+    color: black
+    a
+        font-weight: bold
+        &:hover
+            color: red
+
+#features
+    padding-top: 70px
+    padding-bottom: 89px
+    &-title
+        background-color: red
+        color: #313131
+        &__button
+            padding: 12px 24px
+            background-color: azure 
+    &-subtitle
+        font-size: 14px
+        color: green
+
+// Вложенные элементы
+.selector
+    margin: 
+        top: 10px
+        right: 10px
+        bottom: 25px
+        left: 15px
+
+    padding:
+        top: 10px
+        right: 15px
+        bottom: 25px
+        left: 5px     
+
+// Селекторы шаблоны
+%button-base
+    padding: 15px 28px
+    border-radius: 4px
+    cursor: pointer
+    outline: none
+    font-size: 14px
+    font-weight: 400    
+
+.button-1
+    @extend %button-base // Директива экстенд говорит применить то или иное свойство написаное ранее
+    color: #373737
+    background-color: transparent
+.button-2
+    @extend %button-base
+    background-color: orange
+    color: #ffffff   
+
+// Sasscript 
+
+$sum: 10 + 20 / 2
+$content: content
+
+.selector
+    margin: 
+        top: $sum + px
+        bottom: 12px + 8px
+    background-color: trans + parent
+    #{$content}: "con" + "tent"            
+// #{} - интерполяция, "" + "" - конкатенация
+
+// Переменные в sass 
+
+$primary-button-bgcolor: #ff9d00
+
+button
+    background-color: $primary-button-bgcolor    
+    color: #ffffff
+    &:hover
+        background-color: darken($primary-button-bgcolor, 15%)
+    &:focus
+        background-color: darken($primary-button-bgcolor, 30%)
+
+// Операции с цветами
+
+$color1: #440203 + #550506
+$color2: #010203 * 2
+$color3: rgba(180, 0, 0, 0.75) + rgba(20, 255, 0, 0.75) //альфа канал должен совпадать по правилам
+
+body
+    background-color: $color1
+    color: $color2
+    border-color: $color3
+
+$translucent-red: rgba(255, 0, 0, 0.5)
+
+p
+    color: opacify($translucent-red, 0.3)
+    background-color: transparentize($translucent-red, 0.25)
+
+.selector 
+    background-color: rgba(#333, 0.75)
+
+// Директива @import 
+
+
+@import "_header.sass";
+@import "_features.sass";
+@import "_media.sass"; 
+// "_name" - запись означает какой-то доп файл стилей Sass можно так же css подключить или ссылку на сайт
+
+// Директива @at-root
+
+.selector
+    margin-top: 10px
+    @at-root 
+        .item-1
+            background-color: #fff
+    .item-2
+        background-color: #000
+
+// Директива @if()
+
+// Функция- это коробка, которая принимает внутрь себя что-то и выдает результат
+
+$var: 4
+
+.selector 
+    @if $var >= 5
+        content: '>= 5'
+    @else if $var <= 5
+        content: '<= 5'
+    @else 
+        content: ''
+
+// Директива @for()
+
+// @for - выводит блок со стилями определенное кол-во раз
+// $i - переменная счетчик
+// to от числа до числа, последнее число не включительно
+// through - от числа до числа, последнее число включительно
+  
+
+@for $i from 1 to 11
+    .item-#{$i}
+        background-image: url(img/#{$i}.jpg) 
+
+// Директива @each
+
+@each $name in carousel, block, vertical, reviews, footer
+    .sction-#{$name}
+        background-image: url(img/#{$name}.jpg)
+     
+// Директива @while()
+// while циклично выводит блок стилей, пока выражение яв-ся истинным
+
+$i: 7
+@while $i > 0
+    .item-#{$i}
+        width: 1em * $i
+    $i: $i - 3
+
+// Миксины - блоки Sass кода, которые могут принимать аргументы (входные параметры)
+// Позволяют значительно расширить возможность написания стилей и сократить затраты на применения однотипных правил.
+
+@mixin border($color)
+    border: 1px solid $color
+
+h1
+    @include border(#333)
+
+@mixin transition($time)
+    -webkit-transition: top $time ease-out
+    -moz-transition: top $time ease-out
+    -o-transition: top $time ease-out
+    transition: top $time ease-out
+
+button
+    @include transition(0.5s)
+    
