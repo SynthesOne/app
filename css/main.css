@@ -1,0 +1,61 @@
+body {
+  background-color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #151515;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+.snacks {
+  padding-top: 96px;
+  padding-bottom: 176px;
+  background-image: url(../images/salat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+.snacks::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #151515;
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.snacks-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.snacks-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.snacks-cards {
+  background-color: #ffffff;
+}
+
+.snacks-cards__img {
+  min-height: 178px;
+}
+
+.snacks img {
+  max-width: 100%;
+}
